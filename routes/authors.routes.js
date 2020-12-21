@@ -15,7 +15,7 @@ router.post("/", (req, res) => {
 
 // Get All Authors
 router.get("/", (req, res) => {
-    let message = `A GET request for resource Authors has been made. Unfortunately database is not connected yet, so please come back later`
+    let message = `A GET request for resources Authors has been made. Unfortunately database is not connected yet, so please come back later`
     console.log(message);
     res.json(message)
 })
@@ -23,13 +23,14 @@ router.get("/", (req, res) => {
 // Get One Author
 router.get("/:id", (req, res) => {
     const { id } = req.params
-    let message = `A GET request for ressource Authors has been made, with ID in Params ${id}`
+    let message = `A GET request for resource Authors has been made, with ID in Params ${id}`
     res.json(message)
 })
 
 
 // Delete One Author
 router.delete("/:id", (req, res) => {
+    console.log(req.body)
     const { id } = req.params;
     let message = `A DELETE request for ressource Authors has been made, with ID in Params ${id}`
     console.log(message)

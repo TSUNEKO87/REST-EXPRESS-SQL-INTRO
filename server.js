@@ -8,7 +8,7 @@ const routes = require("./routes");
 app.use('/api', routes)
 
 app.get("/", (req, res) => {
-    res.json("Welcome on my server, what can I do for you ?")
+    res.json("Welcome on my server, what can I do for you baby?")
 })
 app.listen(3000, () => {
     console.log(`Server is running on port 3000`)
